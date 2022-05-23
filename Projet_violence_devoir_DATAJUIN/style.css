@@ -1,0 +1,190 @@
+body{
+    background-color: rgb(14, 13, 13);
+    /* cursor:none; Nous enlevons le curseur */
+    padding:0px;
+    margin:0px;
+}
+#conteneur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* contient le SVG */
+.a{
+    width: 100%;
+    height: 100vmin;
+}
+
+/* contient le graph 1 */
+.b{
+    background-color: rgb(14, 13, 13);
+    width: 100%;
+    height: 100vmin;
+}
+
+/* contient le graph 2 */
+.c{
+    background-color: yellow;
+    width: 100%;
+    height: 100vmin;
+}
+
+/* dessin SVG */
+
+svg{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* ligne dessin  */
+
+svg .cls-2 {
+    stroke: rgb(248, 248, 248);
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 2100;
+    stroke-dashoffset: 2100;
+    animation: animate 60s forwards infinite;
+}
+/* oeil */
+svg .cls-3 {
+    stroke: #951b81;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: animate 250s  forwards infinite;
+}
+
+/* sang nez */
+
+svg .cls-4 {
+    stroke: red;
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: animate 400s forwards infinite;
+}
+
+/* animation svg */
+
+@keyframes animate{
+
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+/* texte animé */
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:230px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:20;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+/* partie présentation et tableau graph */
+.chart {
+    text-align: center;
+    margin: auto;
+}
+
+.row {
+    margin-bottom: 150px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 80px;
+    color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+.texte1, .titre1, .source{
+    color: #ffffff;
+    text-align:justify;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.texte2, .titre2, .source2{
+    color: #ffffff;
+    text-align:justify;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding-right: 200px;
+}
+
+.texte1, .texte2{
+    font-size: 18px;
+}
+
+
+.source, .source2{
+    font-size: 13px;
+}
+
+/* SVG DE FIN */
+
+.svg2{
+    margin-top: 3000px;
+}
+
+
+/* curseur */
+
+#mask
+{
+  width:100vw;
+  height:100vh;
+}
+
+#lamp
+{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:300px;
+  height:300px;
+  border-radius:150px;
+  border-style:solid;
+  border-color:white;
+  
+  background:inherit;
+  
+  box-shadow:1px 1px 12px white;
+  
+  background-size: cover;
+  background-position:0% 0%;
+  background-attachment : fixed;
+  
+}
